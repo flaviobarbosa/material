@@ -1,19 +1,23 @@
 <template>
   <div id="app">
     <Sidenav />
-    <HelloWorld/>
+    <router-link :to="{name: 'HelloWorld'}">Home</router-link>
+    <router-link to="/about">About</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
 import Sidenav from './components/Sidenav'
+import Router from './router/index'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    Sidenav
+    Sidenav,
+    Router
   }
 }
 </script>
